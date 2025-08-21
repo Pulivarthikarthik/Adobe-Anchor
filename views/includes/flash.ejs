@@ -1,0 +1,26 @@
+<% if(success && success.length){ %>
+    <div class="alert alert-success alert-dismissible fade show col-6 offset-3" role="alert">
+
+            <!-- here success is the key which flashes the msg after adding the list and in app.js by res.locals.key -->
+        <%= success %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <!-- it is used to close the flash message in bootstrap -->
+        
+    </div>
+
+    <% } %>
+
+<!-- if it is success and it should not be empty then it comes  or-->
+
+
+ <% if(error && error.length){ %>
+    <div class="alert alert-danger alert-dismissible fade show col-6 offset-3" role="alert">
+
+            <!-- here success is the key which flashes the msg after adding the list and in app.js by res.locals.key -->
+        <%= error %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <!-- it is used to close the flash message in bootstrap -->
+        
+    </div>
+
+    <% } %>

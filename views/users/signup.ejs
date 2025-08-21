@@ -1,0 +1,71 @@
+<% layout('layouts/boilerplate.ejs') %>
+
+
+    <div class="row mt-3">
+        <h1 class="col-6 offset-3">SignUp On WanderLust</h1>
+        <div class="col-6 offset-3">
+            <form action="/signup" method="POST" class="needs-validation" novalidate>
+
+                <div class="mb-3">
+                    <label for="firstname" class="form-label">First Name</label>
+                    <input  name="firstname" id="firstname" placeholder="Enter firstname" class="form-control" required/>
+                    <div class="valid-feedback">
+                        Perfect look!!
+                    </div>
+                    <!-- when we entered wrong then invalid feedback -->
+                    <div class="invalid-feedback">
+                        Please enter valid Name!!
+                     </div>
+                </div>
+                <div class="mb-3">
+                    <label for="lastname" class="form-label">Last Name</label>
+                    <input  name="lastname" id="lastname" placeholder="Enter lastname" class="form-control" required/>
+                    <div class="valid-feedback">
+                         Awesome  !!
+                    </div>
+                    <!-- when we entered wrong then invalid feedback -->
+                    <div class="invalid-feedback">
+                        Please enter valid Name!!
+                     </div>
+                </div>
+                <div class="mb-3">
+                    <label for="username" class="form-label">User Name</label>
+                    <input  name="username" id="username" placeholder="Enter username" class="form-control" required/>
+                    <div class="valid-feedback">
+                         Nice One!!
+                    </div>
+                    <!-- when we entered wrong then invalid feedback -->
+                    <div class="invalid-feedback">
+                        Please enter username Name!!
+                     </div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input  name="email" id='email' type='email'placeholder="Enter email" class="form-control" required/>
+                    <div class="valid-feedback">
+                        Perfect look guess so its a valid one!!
+                    </div>
+                    <!-- when we entered wrong then invalid feedback -->
+                    <div class="invalid-feedback">
+                        Please enter valid email!!
+                     </div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input  name="password" id="password" type="password" placeholder="Enter Password" class="form-control" required/>
+                    <div class="valid-feedback">
+                        Its a strong one!!
+                    </div>
+                    <!-- when we entered wrong then invalid feedback -->
+                    <div class="invalid-feedback">
+                        Please enter strong password!!
+                     </div>
+                </div>
+
+                <button class="btn btn-success">SignUp</button>
+
+
+            </form>
+
+        </div>
+    </div>

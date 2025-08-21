@@ -1,0 +1,90 @@
+<% layout('layouts/boilerplate.ejs') %>
+    <div class="row mt-3">
+        <div class="col-8 offset-2  ">
+
+            <h2>Edit your Listing</h2>
+            <form method="post" action="/listings/<%=listing._id %>?_method=PUT" class="needs-validation" novalidate 
+                enctype="multipart/form-data">
+
+                <div class="mb-3">
+                    <label for="title" class="form-label" >Title</label>
+                    <input type="text" name="listing[title]" value="<%=listing.title%>" placeholder="Enter title"
+                        class="form-control" required />
+                        <div class="valid-feedback">
+                            Perfect Title!!
+                        </div>
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <input type="text" name="listing[description]" value="<%=listing.description%>"
+                        placeholder="Enter description" class="form-control" required />
+                        <div class="invalid-feedback">
+                            Please enter a short description !
+                         </div>
+
+                </div>
+
+                <div class="mb-3">
+                    Original Image
+                    <br>
+                    <img src="<%=originalImageUrl %>"/>
+                    
+                </div>
+
+                <div class="mb-3">
+                    <label for="image" class="form-label">Image URL</label>
+                    <input type="file" name="listing[image]"  
+                        class="form-control" required />
+                    
+                </div>
+
+
+                <div class="row">
+
+
+                    <div class="mb-3 col-md-4">
+                        <label for="price" class="form-label">Price</label>
+                        <input type="text" name="listing[price]" value="<%=listing.price%>" placeholder="Enter price"
+                            class="form-control"  required/>
+                            <div class="invalid-feedback">
+                                Please enter  valid price !
+                             </div>
+
+                    </div>
+
+
+                    <div class="mb-3 col-md-8">
+                        <label for="country" class="form-label">Country</label>
+                        <input type="text" name="listing[country]" value="<%=listing.country%>"
+                            placeholder="Enter country" class="form-control" required />
+                            <div class="invalid-feedback">
+                                Please enter a valid country !
+                             </div>
+
+                    </div>
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" name="listing[location]" value="<%=listing.location%>"
+                        placeholder="Enter location" class="form-control" required />
+                        <div class="invalid-feedback">
+                            Please enter a valid Location !
+                         </div>
+
+                </div>
+                <!-- here we created a key:title in listing same for all i.e., listing[location],etc,. and also it has the bootstrap syntax
+         i.e., class='form-label' in label ,, and class = 'form-control' in input tag and mt(margin top)   -->
+
+
+                <button class="btn btn-dark edit-btn mt-3">EDIT</button>
+
+                <br><br><br>
+            </form>
+
+        </div>
+
+    </div>
