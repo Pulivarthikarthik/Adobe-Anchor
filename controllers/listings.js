@@ -120,3 +120,14 @@ module.exports.destroyListing =   async (req, res) => {
     req.flash("success", "Deleted Succesfully!!")
     res.redirect('/listings');
 } 
+
+//inprogress route
+module.exports.Inprogress = async(req,res)=>{
+    const {query} = req.body;
+     if (!query || query.trim() === "") {
+        req.flash("warning", "We are under development, please try after some time");
+    } else {
+        req.flash("warning", `We are under development. You searched for: ${query}`);
+    }
+     res.redirect('/listings');
+}

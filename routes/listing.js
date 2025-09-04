@@ -22,13 +22,13 @@ const upload = multer({storage})
 
 
 //here we used router.route(path) with same path multiple HTTP requests are handled (put,get,post,del)
+router.post('/search',wrapAsync(listingControllers.Inprogress))
 
 // new form for the listings
 // only listing is common but the other should be defined like new,edit,:id
 //isAuthenticated() is a passport method checks if the user is loggedin or not
 //if yes the he can add the listings  or else he must logged-In
-
-router.get('/new', isLoggedIn,  wrapAsync(listingControllers.renderNewForm))
+ router.get('/new', isLoggedIn,  wrapAsync(listingControllers.renderNewForm))
 //isLoggedIn checks if the user is loggedin for adding the new listing
 
 

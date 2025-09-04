@@ -44,60 +44,60 @@
 
 <div id="filters">
 
-  <div class="filter">
+  <div class="filter" onclick="showFlash('Trending filter under construction! try after some time')">
     <div> <i class="fa-solid fa-fire"></i> </div>
     <p>Trending</p>
 
   </div>
 
-  <div class="filter">
+  <div class="filter" onclick="showFlash('Rooms filter under construction! try after some time')">
     <div> <i class="fa-solid fa-bed"></i> </div>
     <p>Rooms</p>
 
   </div>
-  <div class="filter">
+  <div class="filter" onclick="showFlash('Iconic Cities filter under construction! try after some time')">
     <div> <i class="fa-solid fa-mountain-city"></i> </div>
     <p>Iconic Cities</p>
 
   </div>
 
-  <div class="filter">
+  <div class="filter" onclick="showFlash('Mountains filter under construction! try after some time')">
     <div> <i class="fa-solid fa-mountain"></i> </div>
     <p>Mountains</p>
 
   </div>
-  <div class="filter">
+  <div class="filter" onclick="showFlash('Castles filter under construction! try after some time')">
     <div> <i class="fa-solid fa-crown"></i> </div>
     <p>Castles</p>
 
   </div>
 
-  <div class="filter">
+  <div class="filter" onclick="showFlash('Amazing Pools filter under construction! try after some time')">
     <div> <i class="fa-solid fa-person-swimming"></i> </div>
     <p>Amazing Pools</p>
 
   </div>
-  <div class="filter">
+  <div class="filter" onclick="showFlash('Campaign filter under construction! try after some time')">
     <div> <i class="fa-solid fa-campground"></i> </div>
     <p>Campaign</p>
 
   </div>
-  <div class="filter">
+  <div class="filter" onclick="showFlash('Farms filter under construction! try after some time')">
     <div> <i class="fa-solid fa-cow"></i> </div>
     <p>Farms</p>
 
   </div>
-  <div class="filter">
+  <div class="filter" onclick="showFlash('Arctic filter under construction! try after some time')">
     <div> <i class="fa-solid fa-snowflake"></i> </div>
     <p>Arctic</p>
 
   </div>
-  <div class="filter">
+  <div class="filter" onclick="showFlash('Domes filter under construction! try after some time')">
     <div> <i class="fa-solid fa-igloo "></i> </div>
     <p>Domes</p>
 
   </div>
-  <div class="filter">
+  <div class="filter" onclick="showFlash('Boats filter under construction! try after some time')">
     <div> <i class="fa-solid fa-ship"></i> </div>
     <p>Boats</p>
 
@@ -114,6 +114,23 @@
 
 
 </div>
+ <div id="flash-box" style="display:none; background:#ffefc6; 
+ padding:10px; margin:10px 0; border:1px solid #e0c97f; border-radius:5px;"></div>
+<script>
+  function showFlash(message) {
+    let flashBox = document.getElementById("flash-box");
+    flashBox.innerText = message;
+    flashBox.style.display = "block";
+
+    // auto-hide after 3s
+    setTimeout(() => {
+      flashBox.style.display = "none";
+    }, 3000);
+  }
+</script>
+
+
+<!-- for creating the new listing -->
 <!-- when we click on the button it goes to action i.e., goes to new form to Create -->
 <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
   <!-- here row col-lg(large)-3(cards) is defied by us -->
@@ -137,7 +154,7 @@
     </a>
     <%}%>
 </div>
-
+ 
 
 <script>
   let taxToggle = document.getElementById("switchCheckDefault")
